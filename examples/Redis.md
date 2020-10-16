@@ -22,7 +22,7 @@ if err = pool.Retry(func() error {
 }
 
 // When you're done, kill and remove the container
-if err := pool.Purge(resource); err != nil {
+if err = pool.Purge(resource); err != nil {
     log.Fatalf("Could not purge resource: %s", err)
 }
 ```
